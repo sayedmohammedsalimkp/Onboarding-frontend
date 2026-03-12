@@ -55,7 +55,7 @@ export default function AdminChapterDetailPage() {
 
   const [deletingChapter, setDeletingChapter] = useState(false)
   const [addQuestionOpen, setAddQuestionOpen] = useState(false)
-  const [newQ, setNewQ] = useState({ question: "", A: "", B: "", C: "", D: "", correct_answer: "A" as const, explanation: "" })
+  const [newQ, setNewQ] = useState<{ question: string; A: string; B: string; C: string; D: string; correct_answer: "A" | "B" | "C" | "D"; explanation: string }>({ question: "", A: "", B: "", C: "", D: "", correct_answer: "A", explanation: "" })
   const [addingQuestion, setAddingQuestion] = useState(false)
   const [deletingQuestionId, setDeletingQuestionId] = useState<string | null>(null)
 
